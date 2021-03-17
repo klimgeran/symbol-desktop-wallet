@@ -8,7 +8,6 @@
             {{ $t('skip') }}
         </div>
         <p class="set-title-create">
-            {{ currentProfile.networkType !== networkType.MAIN_NET }}
             {{ $t('verify_mnemonics') }}
         </p>
         <div class="check-mnemonic-col">
