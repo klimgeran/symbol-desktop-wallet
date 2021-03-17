@@ -1,6 +1,14 @@
 <template>
     <div class="check-mnemonic-sec">
+        <div
+            v-if="currentProfile.networkType === networkType.TEST_NET"
+            class="skip pointer"
+            @click="$router.push({ name: 'profiles.createProfile.finalize' })"
+        >
+            {{ $t('skip') }}
+        </div>
         <p class="set-title-create">
+            {{ currentProfile.networkType !== networkType.MAIN_NET }}
             {{ $t('verify_mnemonics') }}
         </p>
         <div class="check-mnemonic-col">
